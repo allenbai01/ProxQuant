@@ -1,6 +1,8 @@
 # ProxQuant: Quantized Neural Networks via Proximal Operators
 This repository provides the implementation for the paper [ProxQuant: Quantized Neural Networks via Proximal Operators](https://openreview.net/forum?id=HyzMyhCcK7) by Yu Bai, Yu-Xiang Wang, and Edo Liberty. 
 
+Our algorithm uses a suitable proximal operator (with eager projection) to perform quantization in between gradient steps. (In contrast, the straight-through gradient method is equivalent to using a hard quantization mapping with lazy projection.) The proximal operator can be customized to binary, ternary, and multi-bit quantization. 
+
 ## Requirements
 1. Python 3.6
 1. PyTorch (==0.4.1)
