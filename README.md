@@ -23,7 +23,7 @@ python main_binary_reg.py --model resnet --resume results/resnet20 --model_confi
 ```
 Train a ternarized net via ProxQuant-ternary:
 ```
-python main_binary_reg.py --resume results/resnet20 --model resnet --model_config "{'depth': 20}" --dataset cifar10 --gpu $i --epochs 600 --reg_rate 1e-4 --tb_dir tb/resnet20_Adam_Freeze_400_run_"$i" --optimizer Adam --lr 0.01 --projection_mode prox_ternary --freeze_epoch 400
+python main_binary_reg.py --resume results/resnet20 --model resnet --model_config "{'depth': 20}" --dataset cifar10 --gpu 0 --epochs 600 --reg_rate 1e-4 --tb_dir tb/resnet20_Adam_Freeze_400_run_0 --optimizer Adam --lr 0.01 --projection_mode prox_ternary --freeze_epoch 400
 ```
 
 Corresponding shell scripts for parallellizing multiple runs (requires multiple GPUs) can be found in `scripts/`.
